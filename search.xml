@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[markdown语法学习]]></title>
+    <url>%2F2018%2F06%2F09%2Fmarkdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[图片测试： 换行啦： 这是引用 嵌套引用&#33; 列出所有元素： 无序列表元素 A 元素 A 的有序子列表 哈哈哈哈哈 前面加四个空格 列表里的多段换行： 前面必须加四个空格， 这样换行，整体的格式不会乱 列表里引用： 前面空一行仍然需要在 &gt; 前面加四个空格 这是新的一段 哈哈哈哈 略略略略 54498897131 68798789464 55456464这是第二段啦 还是说这才是第二段呢&nbsp;试试缩进]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[第一篇测试]]></title>
+    <url>%2F2018%2F06%2F09%2F%E7%AC%AC%E4%B8%80%E7%AF%87%E6%B5%8B%E8%AF%95%2F</url>
+    <content type="text"><![CDATA[hahahah这里是引言]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>key</tag>
+        <tag>key2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F06%2F09%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>test2</category>
+      </categories>
+  </entry>
+</search>
