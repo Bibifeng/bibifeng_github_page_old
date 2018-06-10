@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[小白心得：将编好的网页封装成APP]]></title>
+    <url>%2F2018%2F06%2F09%2F%E5%B0%8F%E7%99%BD%E5%BF%83%E5%BE%97%EF%BC%9A%E5%B0%86%E7%BC%96%E5%A5%BD%E7%9A%84%E7%BD%91%E9%A1%B5%E5%B0%81%E8%A3%85%E6%88%90APP%2F</url>
+    <content type="text"><![CDATA[本文将会说明如何将写好的HTML页面封装成APP以及如何在虚拟模拟器上打开。由于博主也是一个徘徊在APP开发门外的一名路人，这篇博客仅供小白参考（文章太过粗糙，仅仅是参考）。 要知道，目前市场上有很多APP是采用H5编写的界面，或许是因为原生开发对于前端的灵活性并不是那么符合目前市场上的需求，因此在这里介绍如何使用Apache Cordova和Ant将网页封装成Android APP。在使用Cordova之前，我们需要安装一下四项工具： NodeJS Java的JDK Android的SDK Apache Ant Step1：JDK和SDK的安装这里不再赘述，不知道的同学自行百度 Step2：安装Apache Ant：http://ant.apache.org/bindownload.cgi进入网页后，点击zip的链接进行下载，版本选择最新的即可。Ant不需要安装，下载解压即可。 Step3：设置用户变量JDK、SDK、Ant都准备好之后，必须在系统环境变量中指定工具路径。右键 计算机—-属性—-高级系统设置—-环境变量在系统变量区单击“新建”按钮。在“变量名”输入JAVA_HOME（变量名可自己定义），在“变量值”中输入你电脑上的JDK的存放路径。博主的路径如下：确定之后，再次点击新建，设置SDK的变量。 在“变量名”输入ANDROID_SDK（变量名可自己定义），在“变量值”中输入你电脑上的SDK的存放路径。博主的路径如下：接下来是设置Apache Ant的用户变量。三个变量新建完成之后，还要设置Path变量的变量值。在Path中的变量值输入如下4个路径，每个路径变量之间以英文分号 ; 隔开。（新变量与原来的变量直接同样要以分号隔开） %JAVA_HOME%\bin\ %ANT_HOME%\bin\ %ANDROID_SDK%\tools\ %ANDROID_SDK%\platform-tools\Step4：三个必要工具安装完成以后，打开命令提示符窗口（cmd），检查工具是否安装成功。测试命令分别是：java -versionant -versionadb version (此处没有间隔符-)]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>App</tag>
+        <tag>Cordova</tag>
+        <tag>Ant</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[markdown语法学习]]></title>
     <url>%2F2018%2F06%2F09%2Fmarkdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%2F</url>
     <content type="text"><![CDATA[图片测试： 换行啦： 这是引用 嵌套引用&#33; 列出所有元素： 无序列表元素 A 元素 A 的有序子列表 哈哈哈哈哈 前面加四个空格 列表里的多段换行： 前面必须加四个空格， 这样换行，整体的格式不会乱 列表里引用： 前面空一行仍然需要在 &gt; 前面加四个空格 这是新的一段 哈哈哈哈 略略略略 54498897131 68798789464 55456464这是第二段啦 还是说这才是第二段呢&nbsp;试试缩进]]></content>
