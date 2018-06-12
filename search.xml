@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[FreeCodeCamp学习笔记：Bootstrap+Font Awesome篇]]></title>
+    <url>%2F2018%2F06%2F10%2FFreeCodeCamp%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9ABootstrap-Font-Awesome%E7%AF%87%2F</url>
+    <content type="text"><![CDATA[Bootstrap框架引用1&lt;link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css"/&gt; 常用class container-fluid 响应式div img-responsive 使图片自适应页面大小（宽度自适应） text-center 文本居中 text-danger 红色样式文本 text-primary 蓝色样式文本 btn以及btn-default bootstrap默认按钮样式 btn-block 使按钮成为块级元素，按钮将会伸展并填满页面整个水平空间，任何在它之下的元素都会跟着浮动至该区块的下一行 btn-primary 深蓝色按钮样式（一般用于用户主要采取的操作上） btn-info 浅蓝色按钮样式（一般用于用户可能采取的操作上） btn-danger 红色按钮样式（一般用于提醒用户慎重操作：删除、修改等） form-control 运用于表单中的文本框样式 well 为设定的列创造出一种视觉上的深度感 Bootstrap响应式网格布局响应式网格布局，可将多个元素放入一行并且指定元素的相对宽度的需求。如下图所示为bootstrap的12列网格布局：在FreeCodeCamp社区中是这么说明的：]]></content>
+      <categories>
+        <category>FreeCodeCamp</category>
+      </categories>
+      <tags>
+        <tag>FreeCodeCamp</tag>
+        <tag>bootstrap</tag>
+        <tag>Font Awesome</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[小白心得：将编好的网页封装成APP]]></title>
     <url>%2F2018%2F06%2F09%2F%E5%B0%8F%E7%99%BD%E5%BF%83%E5%BE%97%EF%BC%9A%E5%B0%86%E7%BC%96%E5%A5%BD%E7%9A%84%E7%BD%91%E9%A1%B5%E5%B0%81%E8%A3%85%E6%88%90APP%2F</url>
     <content type="text"><![CDATA[本文将会说明如何将写好的HTML页面封装成APP以及如何在虚拟模拟器上打开。由于博主也是一个徘徊在APP开发门外的一名路人，这篇博客仅供小白参考（文章太过粗糙，仅仅是参考）。 要知道，目前市场上有很多APP是采用H5编写的界面，或许是因为原生开发对于前端的灵活性并不是那么符合目前市场上的需求，因此在这里介绍如何使用Apache Cordova和Ant将网页封装成Android APP。在使用Cordova之前，我们需要安装一下四项工具： NodeJS Java的JDK Android的SDK Apache Ant Step1：JDK和SDK的安装这里不再赘述，不知道的同学自行百度 Step2：安装Apache Ant：http://ant.apache.org/bindownload.cgi/进入网页后，点击zip的链接进行下载，版本选择最新的即可。 Ant不需要安装，下载解压即可。 Step3：设置用户变量JDK、SDK、Ant都准备好之后，必须在系统环境变量中指定工具路径。右键 计算机—-属性—-高级系统设置—-环境变量在系统变量区单击“新建”按钮。在“变量名”输入JAVA_HOME（变量名可自己定义），在“变量值”中输入你电脑上的JDK的存放路径。博主的路径如下：确定之后，再次点击新建，设置SDK的变量。 在“变量名”输入ANDROID_SDK（变量名可自己定义），在“变量值”中输入你电脑上的SDK的存放路径。博主的路径如下：接下来是设置Apache Ant的用户变量。三个变量新建完成之后，还要设置Path变量的变量值。在Path中的变量值输入如下4个路径，每个路径变量之间以英文分号 ; 隔开。（新变量与原来的变量直接同样要以分号隔开） %JAVA_HOME%\bin\ %ANT_HOME%\bin\ %ANDROID_SDK%\tools\ %ANDROID_SDK%\platform-tools\ Step4：三个必要工具安装完成以后，打开命令提示符窗口（cmd），检查工具是否安装成功。测试命令分别是： java -version ant -version adb version &nbsp;(此处没有间隔符-) 如果三个工具安装成功，会分别显示版本信息，如果某一项没有安装成功，命令行会显示“不是内部或外部命令，也不是可运行的程序或批处理文件”。如果是找不到命令，大多数是因为你的变量设置路径的时候不正确。查看一下是否路径写错或者遗漏。 Step5：通过npm安装Cordova在此之前我们还要先安装NodeJS，下载地址：http://nodejs.org/ 打开官网之后单击install，下载并安装NodeJS。安装完成之后，就可以使用npm命令去安装Cordova。打开CMD窗口（避免安装出现错误，建议以管理员身份打开CMD，右键cmd—-以管理员身份运行）。输入下列语法安装Cordova1npm install -g cordova NodeJS安装完成时会自动增加环境变量，如果上述命令无法执行，检查一下你的Path变量中有没有自动添加进去。 Step6：Cordova安装完成之后，打开AVD Manager新建安卓模拟器AVD Manger应用程序一般在SDK目录下可以找到，找不到的同学（比如博主的SDK目录就是没有AVD Manager），可以从AndroidStudio里面直接点击打开。如下图红圈所示：打开之后新建模拟器，新建完成之后可以点击右边的启动按钮即可启动模拟器了。但是我们现在还不需要启动，因为我们接下来要将自己写的网页包装成apk Step7：将网页转换成Android AppAndroid的软件安装文件必须是apk文件，只要将apk文件导入模拟器，就可在模拟器上安装你的app。那么我们先要得到apk文件。（1）创建项目。打开cmd，输入命令1cordova create hello com.example.hello HelloWorld 输入这个创建命令之前，需要进入某个盘符如D盘，再输入上面的命令，那么将会在D盘自动生成一个HelloWorld项目。create后面的三个参数，分别对应的是文件夹名称（hello）、App id（com.example.hello） 、app名称（HelloWorld）。创建完以后，打开D盘的hello文件夹，会有如下几个子目录，其中www就是放置你自己网页的文件夹。如图：（2）添加Android平台（首先在cmd进入项目文件夹，即hello文件夹）进入之后输入如下命令：1cordova platform add android （3）创建APP，生成apk文件。（还是在项目文件夹输入如下命令）：1cordova run android 命令执行之后，我们可以在如下路径找到你自己的app安装包，即apk文件：D:\hello\platforms\android\app\build\outputs\apk\debug（4）将你的apk导入至模拟器并安装，参考地址：百度首先打开安卓模拟器（必须要先打开），cmd命令行进入sdk文件夹的platform-tools文件夹下（目的是要找到此目录下的adb.exe），然后执行安装apk文件的命令：1adb install apk文件路径和地址 比如博主刚才的apk文件位置是在D:\hello\platforms\android\app\build\outputs\apk\debug那么安装命令就是：1adb install D:\hello\platforms\android\app\build\outputs\apk\debug\app-debug.apk 命令最后面是你的apk文件（如下图所示，项目文件夹名字有变化，是另外一个项目）出现success即为成功，在你的模拟器上便出现了一个新的app]]></content>
