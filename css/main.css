@@ -1880,7 +1880,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #20ff5d;
+  background: #ffe74d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2776,13 +2776,4 @@ span#inline-purple {
   vertical-align: baseline;
   border-radius: 0;
   background-color: #9954bb;
-}
-.post-body a {
-  color: #05aaf4;
-  border-bottom: none;
-  text-decoration: underline;
-}
-.post-body a:hover {
-  color: #7fd1e3;
-  text-decoration: underline;
 }
