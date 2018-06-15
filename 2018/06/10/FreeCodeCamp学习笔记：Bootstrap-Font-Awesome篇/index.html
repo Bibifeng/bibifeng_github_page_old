@@ -106,7 +106,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://bibifeng.github.io/2018/06/10/FreeCodeCamp学习笔记：Bootstrap-Font-Awesome篇/20180513143907868.jpg">
 <meta property="og:image" content="https://bibifeng.github.io/2018/06/10/FreeCodeCamp学习笔记：Bootstrap-Font-Awesome篇/20180513145400824.jpg">
-<meta property="og:updated_time" content="2018-06-12T01:15:23.805Z">
+<meta property="og:updated_time" content="2018-06-15T16:02:55.382Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FreeCodeCamp学习笔记：Bootstrap+Font Awesome篇">
 <meta name="twitter:description" content="Bootstrap框架引用1&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css&quot;/&amp;gt; 常用class container-fluid  响应式div img-responsive    使图片自适应页面大小（宽度自适应） text-center    文本居中 text">
@@ -413,7 +413,11 @@
 <li><strong>form-control</strong>    <font color="#9370DB">运用于表单中的文本框样式</font></li>
 <li><strong>well</strong>  <font color="#9370DB">为设定的列创造出一种视觉上的深度感</font></li>
 </ul>
-<h3 id="Bootstrap响应式网格布局"><a href="#Bootstrap响应式网格布局" class="headerlink" title="Bootstrap响应式网格布局"></a>Bootstrap响应式网格布局</h3><p>响应式网格布局，可将多个元素放入一行并且指定元素的相对宽度的需求。如下图所示为bootstrap的12列网格布局：<br><img src="/2018/06/10/FreeCodeCamp学习笔记：Bootstrap-Font-Awesome篇/20180513145400824.jpg" alt="pic">在<a href="https://www.freecodecamp.cn/" target="_blank" rel="noopener">FreeCodeCamp</a>社区中是这么说明的：</p>
+<h3 id="Bootstrap响应式网格布局"><a href="#Bootstrap响应式网格布局" class="headerlink" title="Bootstrap响应式网格布局"></a>Bootstrap响应式网格布局</h3><p>响应式网格布局，可将多个元素放入一行并且指定元素的相对宽度的需求。如下图所示为bootstrap的12列网格布局：<br><img src="/2018/06/10/FreeCodeCamp学习笔记：Bootstrap-Font-Awesome篇/20180513145400824.jpg" alt="pic">在<a href="https://www.freecodecamp.cn/" target="_blank" rel="noopener">FreeCodeCamp</a>社区中是这么说明的：在这张图表中，class属性 <font color="#9370DB">col-md-*</font> 正被使用。在这里，<font color="#9370DB">md</font>表示medium（中等的），<font color="#9370DB">*</font> 代表一个数字，它指定了这个元素所占的列宽。通过此图表的属性设置可知，在中等大小的屏幕上(例如笔记本电脑)，元素的列宽被指定了。有时会使用 <font color="#9370DB">col-xs-*</font> ，其中<font color="#9370DB">xs</font>是extra small的缩写（应用于较小的屏幕，比如手机屏幕），<font color="#9370DB">*</font> 是你需要填写的数字，代表在一行中,各个元素应该占的列宽。</p>
+<p>注意：在用 <font color="#9370DB">col-xs-*</font> 类之前，必须要将这些div放入一个具有row类的div中，这样布局才能生效。即：<font color="#9370DB">&lt;div class=&quot;row&quot;&gt;</font>中嵌入一个或数个<font color="#9370DB">&lt;div class=&quot;col-xs-*&quot;&gt;</font></p>
+<h3 id="Font-Awesome-Icon"><a href="#Font-Awesome-Icon" class="headerlink" title="Font Awesome Icon"></a>Font Awesome Icon</h3><p><a href="http://fontawesome.dashgame.com/" target="_blank" rel="noopener">Font Awesome</a>，一套绝佳的图标字体库和css框架。其中，这些图标都是矢量图形，而且和字体一样，可以通过px单位来指定图标的大小。引用链接：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"//cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css"</span>/&gt;</span><br></pre></td></tr></table></figure></p>
+<p>使用方法：<font color="#9370DB">&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;</font>&nbsp;&nbsp;其中，fa类为必须，第二个类参考你所需要用到的图标，其格式为<font color="#9370DB">fa-xxx</font>，<font color="#9370DB">xxx</font>为对应的图标代码。</p>
+<p>参考资料：<a href="https://www.freecodecamp.cn/" target="_blank" rel="noopener">FreeCodeCamp社区</a></p>
 
       
     </div>
@@ -633,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Bootstrap框架引用"><span class="nav-number">1.</span> <span class="nav-text">Bootstrap框架引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用class"><span class="nav-number">2.</span> <span class="nav-text">常用class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bootstrap响应式网格布局"><span class="nav-number">3.</span> <span class="nav-text">Bootstrap响应式网格布局</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Bootstrap框架引用"><span class="nav-number">1.</span> <span class="nav-text">Bootstrap框架引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用class"><span class="nav-number">2.</span> <span class="nav-text">常用class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bootstrap响应式网格布局"><span class="nav-number">3.</span> <span class="nav-text">Bootstrap响应式网格布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Font-Awesome-Icon"><span class="nav-number">4.</span> <span class="nav-text">Font Awesome Icon</span></a></li></ol></div>
             
 
           </div>
