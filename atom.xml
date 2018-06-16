@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Bibifeng&#39;s blog</title>
+  
+  <subtitle>我想要的，现在就要</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://bibifeng.github.io/"/>
+  <updated>2018-06-16T02:54:16.159Z</updated>
+  <id>https://bibifeng.github.io/</id>
+  
+  <author>
+    <name>Bibifeng</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FreeCodeCamp学习笔记：Basic JavaScript之Profile Lookup</title>
+    <link href="https://bibifeng.github.io/2018/06/16/FreeCodeCamp%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9ABasic-JavaScript%E4%B9%8BProfile-Lookup/"/>
+    <id>https://bibifeng.github.io/2018/06/16/FreeCodeCamp学习笔记：Basic-JavaScript之Profile-Lookup/</id>
+    <published>2018-06-16T02:11:33.000Z</published>
+    <updated>2018-06-16T02:54:16.159Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;有一个对象数组，里面存储着通讯录。&lt;br&gt;函数 lookUp 有两个预定义参数：&lt;font color=&quot;#9370DB&quot;&gt;firstName&lt;/font&gt; 值和 &lt;font color=&quot;#9370DB&quot;&gt;prop&lt;/font&gt; 属性。&lt;br&gt;函数将会检查通讯录中是否存在一个与传入的 &lt;font color=&quot;#9370DB&quot;&gt;firstName&lt;/font&gt; 相同的联系人。如果存在，那么还需要检查对应的联系人中是否存在 &lt;font color=&quot;#9370DB&quot;&gt;prop&lt;/font&gt; 属性。&lt;br&gt;如果它们都存在，函数返回 &lt;font color=&quot;#9370DB&quot;&gt;prop&lt;/font&gt; 属性对应的值。&lt;br&gt;如果 &lt;font color=&quot;#9370DB&quot;&gt;firstName&lt;/font&gt; 值不存在，返回 &lt;font color=&quot;#9370DB&quot;&gt;&amp;quot;No such contact&amp;quot;&lt;/font&gt;。&lt;br&gt;如果 &lt;font color=&quot;#9370DB&quot;&gt;prop&lt;/font&gt; 属性不存在，返回 &lt;font color=&quot;#9370DB&quot;&gt;&amp;quot;No such property&amp;quot;&lt;/font&gt;。&lt;br&gt;其中，通讯录数组如下：&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;var contacts = [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;firstName&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Akira&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;lastName&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Laine&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;number&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;0543236543&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;likes&quot;&lt;/span&gt;: [&lt;span class=&quot;string&quot;&gt;&quot;Pizza&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;Coding&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;Brownie Points&quot;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;firstName&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Harry&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;lastName&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Potter&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;number&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;0994372684&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;likes&quot;&lt;/span&gt;: [&lt;span class=&quot;string&quot;&gt;&quot;Hogwarts&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;Magic&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;Hagrid&quot;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;firstName&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Sherlock&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;lastName&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Holmes&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;number&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;0487345643&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;likes&quot;&lt;/span&gt;: [&lt;span class=&quot;string&quot;&gt;&quot;Intriguing Cases&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;Violin&quot;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;firstName&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Kristian&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;lastName&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Vos&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;number&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;unknown&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;likes&quot;&lt;/span&gt;: [&lt;span class=&quot;string&quot;&gt;&quot;Javascript&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;Gaming&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;Foxes&quot;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;];&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;解答过程&quot;&gt;&lt;a href=&quot;#解答过程&quot; class=&quot;headerlink&quot; title=&quot;解答过程&quot;&gt;&lt;/a&gt;解答过程&lt;/h3&gt;&lt;p&gt;拿到题目首先想到的是利用for循环，遍历数组，然后判断通讯录中是否存在与函数传进来的变量 &lt;font color=&quot;#9370DB&quot;&gt;firstName&lt;/font&gt; 相匹配的数组，如果有，进行第二步判断，如果没有，返回 &lt;font color=&quot;#9370DB&quot;&gt;&amp;quot;No such contact&amp;quot;&lt;/font&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="FreeCodeCamp" scheme="https://bibifeng.github.io/categories/FreeCodeCamp/"/>
+    
+    
+      <category term="JavaScript" scheme="https://bibifeng.github.io/tags/JavaScript/"/>
+    
+      <category term="FreeCodeCamp" scheme="https://bibifeng.github.io/tags/FreeCodeCamp/"/>
+    
+      <category term="Profile Lookup" scheme="https://bibifeng.github.io/tags/Profile-Lookup/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FreeCodeCamp学习笔记：Bootstrap+Font Awesome篇</title>
+    <link href="https://bibifeng.github.io/2018/06/10/FreeCodeCamp%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9ABootstrap-Font-Awesome%E7%AF%87/"/>
+    <id>https://bibifeng.github.io/2018/06/10/FreeCodeCamp学习笔记：Bootstrap-Font-Awesome篇/</id>
+    <published>2018-06-10T15:31:56.000Z</published>
+    <updated>2018-06-15T16:02:55.382Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Bootstrap框架引用&quot;&gt;&lt;a href=&quot;#Bootstrap框架引用&quot; class=&quot;headerlink&quot; title=&quot;Bootstrap框架引用&quot;&gt;&lt;/a&gt;Bootstrap框架引用&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;link rel=&lt;span class=&quot;string&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; href=&lt;span class=&quot;string&quot;&gt;&quot;//cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;常用class&quot;&gt;&lt;a href=&quot;#常用class&quot; class=&quot;headerlink&quot; title=&quot;常用class&quot;&gt;&lt;/a&gt;常用class&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;container-fluid&lt;/strong&gt;  &lt;font color=&quot;#9370DB&quot;&gt;响应式div&lt;/font&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;img-responsive&lt;/strong&gt;    &lt;font color=&quot;#9370DB&quot;&gt;使图片自适应页面大小（宽度自适应）&lt;/font&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;text-center&lt;/strong&gt;    &lt;font color=&quot;#9370DB&quot;&gt;文本居中&lt;/font&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;text-danger&lt;/strong&gt;    &lt;font color=&quot;#9370DB&quot;&gt;红色样式文本&lt;/font&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;text-primary&lt;/strong&gt;    &lt;font color=&quot;#9370DB&quot;&gt;蓝色样式文本&lt;/font&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;btn以及btn-default&lt;/strong&gt;    &lt;font color=&quot;#9370DB&quot;&gt;bootstrap默认按钮样式&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="FreeCodeCamp" scheme="https://bibifeng.github.io/categories/FreeCodeCamp/"/>
+    
+    
+      <category term="FreeCodeCamp" scheme="https://bibifeng.github.io/tags/FreeCodeCamp/"/>
+    
+      <category term="bootstrap" scheme="https://bibifeng.github.io/tags/bootstrap/"/>
+    
+      <category term="Font Awesome" scheme="https://bibifeng.github.io/tags/Font-Awesome/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小白心得：将编好的网页封装成APP</title>
+    <link href="https://bibifeng.github.io/2018/06/09/%E5%B0%8F%E7%99%BD%E5%BF%83%E5%BE%97%EF%BC%9A%E5%B0%86%E7%BC%96%E5%A5%BD%E7%9A%84%E7%BD%91%E9%A1%B5%E5%B0%81%E8%A3%85%E6%88%90APP/"/>
+    <id>https://bibifeng.github.io/2018/06/09/小白心得：将编好的网页封装成APP/</id>
+    <published>2018-06-09T15:19:56.000Z</published>
+    <updated>2018-06-10T09:05:21.748Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;本文将会说明如何将写好的HTML页面封装成APP以及如何在虚拟模拟器上打开。&quot;&gt;&lt;a href=&quot;#本文将会说明如何将写好的HTML页面封装成APP以及如何在虚拟模拟器上打开。&quot; class=&quot;headerlink&quot; title=&quot;本文将会说明如何将写好的HTML页面封装成APP以及如何在虚拟模拟器上打开。&quot;&gt;&lt;/a&gt;本文将会说明如何将写好的HTML页面封装成APP以及如何在虚拟模拟器上打开。&lt;/h3&gt;&lt;div class=&quot;note warning&quot;&gt;&lt;p&gt;由于博主也是一个徘徊在APP开发门外的一名路人，这篇博客仅供小白参考（文章太过粗糙，仅仅是参考）。 &lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;要知道，目前市场上有很多APP是采用H5编写的界面，或许是因为原生开发对于前端的灵活性并不是那么符合目前市场上的需求，因此在这里介绍如何使用Apache Cordova和Ant将网页封装成Android APP。在使用Cordova之前，我们需要安装一下四项工具：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;NodeJS&lt;/li&gt;
+&lt;li&gt;Java的JDK&lt;/li&gt;
+&lt;li&gt;Android的SDK&lt;/li&gt;
+&lt;li&gt;Apache Ant&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&quot;Step1：JDK和SDK的安装这里不再赘述，不知道的同学自行百度&quot;&gt;&lt;a href=&quot;#Step1：JDK和SDK的安装这里不再赘述，不知道的同学自行百度&quot; class=&quot;headerlink&quot; title=&quot;Step1：JDK和SDK的安装这里不再赘述，不知道的同学自行百度&quot;&gt;&lt;/a&gt;Step1：JDK和SDK的安装这里不再赘述，不知道的同学自行百度&lt;/h4&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="https://bibifeng.github.io/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="https://bibifeng.github.io/tags/Android/"/>
+    
+      <category term="App" scheme="https://bibifeng.github.io/tags/App/"/>
+    
+      <category term="Ant" scheme="https://bibifeng.github.io/tags/Ant/"/>
+    
+      <category term="Cordova" scheme="https://bibifeng.github.io/tags/Cordova/"/>
+    
+  </entry>
+  
+</feed>
