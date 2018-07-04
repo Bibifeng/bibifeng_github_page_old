@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bibifeng.github.io/"/>
-  <updated>2018-06-16T02:54:16.159Z</updated>
+  <updated>2018-07-04T15:24:45.085Z</updated>
   <id>https://bibifeng.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Apache对多个项目进行站点配置</title>
+    <link href="https://bibifeng.github.io/2018/07/04/%E4%BD%BF%E7%94%A8Apache%E5%AF%B9%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE%E8%BF%9B%E8%A1%8C%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE/"/>
+    <id>https://bibifeng.github.io/2018/07/04/使用Apache对多个项目进行站点配置/</id>
+    <published>2018-07-04T14:17:46.000Z</published>
+    <updated>2018-07-04T15:24:45.085Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;div class=&quot;note warning&quot;&gt;&lt;p&gt;由于项目需要，接触到了Apache的虚拟主机配置，有时候我们需要在一台机器上对多个不同的项目进行虚拟主机配置，在此记录一下配置步骤以便往后参考 &lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;比如：我电脑上有两个项目分别为pms和adminW
+      
+    
+    </summary>
+    
+      <category term="Apache" scheme="https://bibifeng.github.io/categories/Apache/"/>
+    
+    
+      <category term="Apache" scheme="https://bibifeng.github.io/tags/Apache/"/>
+    
+      <category term="ThinkPhp5" scheme="https://bibifeng.github.io/tags/ThinkPhp5/"/>
+    
+  </entry>
   
   <entry>
     <title>FreeCodeCamp学习笔记：Basic JavaScript之Profile Lookup</title>
